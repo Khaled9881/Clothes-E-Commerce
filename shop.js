@@ -1,4 +1,4 @@
-// with the help of AI (ChatGPT)  > dual slider
+// dual slider
 const minR = document.getElementById("min-range");
 const maxR = document.getElementById("max-range");
 const fill = document.getElementById("fill");
@@ -183,34 +183,6 @@ Sortlist.addEventListener("click", (e) => {
 //⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️
 //Main Cards
 
-// console.log(PriceAfter);
-// const NewArrivalEvaluation = document.querySelectorAll(".evaluation");
-
-// NewArrivalImages.forEach((x) => console.log(x));
-// fetch("/db.json")
-//   .then((s) => s.json())
-//   .then((x) => {
-//     const { products } = x;
-//     console.log(products);
-//     const na = products.filter((s) => s.collection == "New-Arrival-Home");
-//     console.log(na);
-
-//     na.forEach((e, i) => {
-//       //   console.log(e);
-//       NewArrivalImages[i].setAttribute("src", `${e.image}`);
-//       NewArrivalNames[i].textContent = e.name;
-//       NewArrivalEvaluation[i].textContent = e.rating;
-//       NewArrivalsStars[i].style.setProperty("--rating", e.rating);
-
-//       PriceAfter[i].textContent = e.price;
-//       if (e.discount != null) {
-//         OriginalPrice[i].textContent = "$" + e.original_price;
-//         DiscountNewArrival[i].textContent = `-${e.discount}%`;
-//         DiscountNewArrival[i].classList.add("givecol");
-//       }
-//     });
-//   });
-
 const CardsContainer = document.querySelector(".productCards");
 
 function CreatCards(len) {
@@ -219,7 +191,7 @@ function CreatCards(len) {
   for (let i = 0; i < len; i++) {
     CardsContainer.insertAdjacentHTML(
       "beforeend",
-      `<div class="card">
+      `<div class="card" data-product-id = "">
             <div class="ProImage naimg1">
               <img src="/images/New-Arrival-Home/1.webp" alt="" />
             </div>
@@ -238,66 +210,40 @@ function CreatCards(len) {
   }
 }
 
-function AppendStyle(style, Ados = "", Adnmae = "") {
+//Session Storage
+
+sessionStorage.setItem("collection", "Casual");
+sessionStorage.setItem("Category", "");
+sessionStorage.setItem("SortedBy", "Low Price");
+
+function AppendStyle() {
   fetch("/db.json")
     .then((s) => s.json())
     .then((x) => {
       const { products } = x;
 
-      let styleProducts = products.filter((a) => a.collection == style);
+      let styleProducts = products.filter(
+        (a) => a.collection == sessionStorage.getItem("collection"),
+      );
       //   console.log(styleProducts);
 
-      if (Ados == "category")
-        styleProducts = styleProducts.filter((a) => a[`${Ados}`] == Adnmae);
+      if (sessionStorage.getItem("Category") !== "")
+        styleProducts = styleProducts.filter(
+          (a) => a["category"] == sessionStorage.getItem("Category"),
+        );
 
-      //sort
-      if (Ados == "sort") {
-        // styleProducts.sort((a, b) => a.price - b.price);
-        console.log(Adnmae);
+      let SortFinalo = sessionStorage.getItem("SortedBy");
 
-        if (Adnmae == "Low Price")
-          styleProducts.sort((a, b) => a.price - b.price);
-        else if (Adnmae == "High Price")
-          styleProducts.sort((a, b) => b.price - a.price);
-        else if (Adnmae == "Most Popular")
-          styleProducts.sort((a, b) => b.rating - a.rating);
+      if (SortFinalo == "Low Price")
+        styleProducts.sort((a, b) => a.price - b.price);
+      else if (SortFinalo == "High Price")
+        styleProducts.sort((a, b) => b.price - a.price);
+      else if (SortFinalo == "Most Popular")
+        styleProducts.sort((a, b) => b.rating - a.rating);
 
-        // if (false) {
-        //   // prettier-ignore
-        //   let CurrentCards = document.getElementsByClassName("card" );
-        //   // console.log(CurrentCards);
-        //   // console.log(CurrentCards.length);
-
-        //   stylenodes = Array.from(CurrentCards).sort((a, b) => {
-        //     console.log("***********************************");
-        //     // prettier-ignore
-        //     let a1 = products.filter( (w) => w.name == a.querySelector(".proname").textContent.trim());
-        //     //   console.log(a);
-        //     // prettier-ignore
-        //     let b1 = products.filter( (w) => w.name == b.querySelector(".proname").textContent.trim());
-        //     //   console.log(b);
-        //     return a1[0].price - b1[0].price;
-        //   });
-
-        //   console.log("sorted");
-        //   console.log("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️");
-        //   // console.log(styleProducts[0].querySelector(".proname").textContent);
-        //   let namess = stylenodes.map(
-        //     (z) => z.querySelector(".proname").textContent,
-        //   );
-
-        //   console.log(namess);
-
-        //   styleProducts = products.filter((p) =>
-        //     namess.some((name) => name.toLowerCase() === p.name.toLowerCase()),
-        //   );
-        //   console.log("⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️");
-        // }
-      }
+      document.querySelector(".EditTxt").textContent = SortFinalo;
 
       console.log(styleProducts);
-
-      //   console.log(styleProducts.length);
       CreatCards(styleProducts.length);
 
       //Another
@@ -312,6 +258,11 @@ function AppendStyle(style, Ados = "", Adnmae = "") {
 
       styleProducts.forEach((e, i) => {
         //   console.log(e);
+        // set dataset id
+        NewArrivalImages[i].closest(".card").dataset.productId = e.id;
+        // card.setAttribute("data-product-id", productId);
+        // console.log(e.id);
+        // NewArrivalImages[i].setAttribute("data-product-id", "productId");
         NewArrivalImages[i].setAttribute("src", `${e.image}`);
         NewArrivalNames[i].textContent = e.name;
         NewArrivalEvaluation[i].textContent = e.rating;
@@ -329,16 +280,17 @@ function AppendStyle(style, Ados = "", Adnmae = "") {
 
 let StoredStyle = "Casual";
 
-AppendStyle("Casual");
+AppendStyle();
 
 const Sn1 = document.querySelector(".StyleName");
 
 ClothesStyles.addEventListener("click", (e) => {
   e.preventDefault();
   let ChosenS = e.target.textContent.trim();
-  //   console.log("Chosen");
-  //   console.log(ChosenS);
-  AppendStyle(ChosenS);
+  sessionStorage.setItem("collection", ChosenS);
+  sessionStorage.setItem("Category", "");
+
+  AppendStyle();
   Sn1.textContent = e.target.textContent;
   window.scrollTo({
     top: 0,
@@ -352,27 +304,84 @@ const Category = document.querySelector(".cat303");
 
 Category.addEventListener("click", (e) => {
   e.preventDefault();
-  //   console.log(
-  //     e.target.closest(".flixonase").querySelector(".CatText").textContent,
-  //   );
-
   let CatName = e.target
     .closest(".flixonase")
     .querySelector(".CatText").textContent;
-  AppendStyle(StoredStyle, "category", CatName);
+
+  sessionStorage.setItem("Category", CatName);
+  AppendStyle();
 });
 
 const Sorting = document.querySelector(".sortby");
 
 Sorting.addEventListener("click", (e) => {
   e.preventDefault();
-  //   console.log(
-  //     e.target.closest(".flixonase").querySelector(".CatText").textContent,
-  //   );
-
-  let CatName = e.target
+  let SortName = e.target
     .closest(".msa")
     .querySelector(".tetx")
     .textContent.trim();
-  AppendStyle(StoredStyle, "sort", CatName);
+
+  sessionStorage.setItem("SortedBy", SortName);
+
+  AppendStyle();
+});
+
+//Last Touches
+
+// localStorage.setItem("productId", "");
+
+document.querySelector(".productCards").addEventListener("click", (e) => {
+  e.preventDefault();
+  let getId = e.target.closest(".card").getAttribute("data-product-id");
+  console.log(e.target.closest(".card"));
+  console.log(getId);
+  localStorage.setItem("productId", getId);
+  window.location.href = "/product.html";
+});
+
+// ⚠️⚠️⚠️⚠️⚠️⚠️⚠️Linking Pages
+
+// document.querySelector(".pwin1").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (e.target.closest(".tnt")) {
+//     window.location.href = "/shop.html";
+//   }
+// });
+
+// document.querySelector(".stick ul").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (e.target.closest(".C44")) {
+//     window.location.href = "/shop.html";
+//   }
+// });
+
+document.querySelector(".fa-circle-user").addEventListener("click", (e) => {
+  window.location.href = "/index.html";
+});
+
+document
+  .querySelector(".stick div:first-child")
+  .addEventListener("click", (e) => {
+    window.location.href = "/index.html";
+  });
+
+//Cart Counter
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counter = document.querySelector(".CartCounter");
+  if (!counter) return;
+  const nums = parseInt(localStorage.getItem("nums"));
+  if (nums) {
+    counter.textContent = nums;
+    counter.style.backgroundColor = "black";
+  } else {
+    counter.style.backgroundColor = "white";
+  }
+});
+
+// ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️Go To Cart
+
+document.querySelector(".headicons i").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "/cart.html";
 });

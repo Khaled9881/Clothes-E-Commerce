@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes E-Commerce</title>
+    <meta
+      name="description"
+      content="This Khaked ITI E-Commerce clothes Project"
+    />
+    <link rel="icon" type="image/jpg" href="icon.jpg" />
+    <link href="https://fonts.cdnfonts.com/css/integral-cf" rel="stylesheet" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-7,200..1000&family=Jomhuria&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="stylesheet"
+      href="libs/fontawesome-free-7.2.0-web/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+  </head>
+  <body>
+    <!-- discount -->
+    <div class="discbar">
+      <div class="container Discount">
+        Sign up and get 20% off to your first order. <span>Sign Up Now</span>
+      </div>
+    </div>
+
+    <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+  /* sticky Bar */ -->
+    <div class="stickparent">
+      <div class="stick container">
+        <div>SHOP.CO</div>
+        <!-- <ul>
+          <li class="cat1">
+            <a href="">Shop<i class="fa-solid fa-angle-down"></i> </a>
+            <div class="pwin1">
+              <div class="test1">
+                <div class="mh1">Men's Clothes</div>
+                <div class="cm1">
+                  In attractive and spectacular colors and designs
+                </div>
+              </div>
+              <div>
+                <div class="mh1">Women's Clothes</div>
+                <div class="cm1">
+                  Ladies, your style and tastes are important to us
+                </div>
+              </div>
+              <div>
+                <div class="mh1">Kids Clothes</div>
+                <div class="cm1">
+                  For all ages, with happy and beautiful colors
+                </div>
+              </div>
+              <div>
+                <div class="mh1">Bags and Shoes</div>
+                <div class="cm1">
+                  Suitable for men, women and all tastes and styles
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">On Sale</a>
+          </li>
+          <li>
+            <a href="">New Arrivals</a>
+          </li>
+          <li>
+            <a href="">Brands</a>
+          </li>
+        </ul> -->
+
+        <ul>
+          <li class="cat1 C44">
+            <a href="">Shop<i class="fa-solid fa-angle-down"></i> </a>
+            <div class="pwin1">
+              <div class="test1 tnt">
+                <div class="mh1">Men's Clothes</div>
+                <div class="cm1">
+                  In attractive and spectacular colors and designs
+                </div>
+              </div>
+              <div class="tnt">
+                <div class="mh1">Women's Clothes</div>
+                <div class="cm1">
+                  Ladies, your style and tastes are important to us
+                </div>
+              </div>
+              <div class="tnt">
+                <div class="mh1">Kids Clothes</div>
+                <div class="cm1">
+                  For all ages, with happy and beautiful colors
+                </div>
+              </div>
+              <div class="tnt">
+                <div class="mh1">Bags and Shoes</div>
+                <div class="cm1">
+                  Suitable for men, women and all tastes and styles
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="C44">
+            <a href="">On Sale</a>
+          </li>
+          <li  class="C44">
+            <a href="">New Arrivals</a>
+          </li>
+          <li  class="C44">
+            <a href="">Brands</a>
+          </li>
+        </ul>
+        
+        <div class="scont">
+          <i class="fa-solid fa-magnifying-glass sicon"></i>
+          <div class="search1">
+            <input
+              type="search"
+              id="site-search"
+              name="q"
+              placeholder="Search for products..."
+            />
+          </div>
+        </div>
+        <div class="headicons">
+          <i class="fa-solid fa-cart-shopping cart1"></i>
+          <i class="fa-regular fa-circle-user"></i>
+          <div class="CartCounter">4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+      Addons section -->
+    <div class="addons container">
+      <hr />
+      <div><span>Home</span> <span>></span> <span class="spashop">Shop</span> <span class="ww2"> ></span> <span class="AddonsName"></span> </div>
+    </div>
+  </body>
+</html>
+
+
+ <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+      Main section -->
+
+      <div class="mainS container">
+        <div class="smc">
+            <img src="" alt="">
+        </div>
+        <!-- <div class="lc">
+            <img src="/images/Casual/2.webp" alt="">
+        </div> -->
+        <!-- <div > -->
+            <img class="lc" src="" alt="">
+        <!-- </div> -->
+        <div class="cd">
+            <h1 class="h1name">Chechered Shirt</h1>
+            <div class="CityStar">
+              <span class="star">★★★★★</span>
+              <span class="evaluation"></span><span class="slashDisck">/5</span>
+            </div>
+            <div class="ProductPrice">
+              <span>$</span><span class="PriceNo"></span>
+              <span class="PriceAfter"></span>
+              <span class="ProductDiscount"></span>
+            </div>
+            <div class="proDescription">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</div>
+            <hr>
+            <div class="sColors">Select Colors</div>
+            <div class="colors">
+                <div class="hide-before"></div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <hr>
+            <div class="CSize">Choose Size</div>
+            <div class="sizes">
+                 <div class="">Small</div>
+                 <div class="">Medium</div>
+                 <div class="">Large</div>
+                 <div class="">X-Large</div>
+            </div>
+            <hr>
+            <div class="buttons">
+                <div class="lbtn">
+                    <span class="nimus"><i class="fa-solid fa-minus"></i></span><span class="PNO">1</span><span class="plus"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="rbtn">Add to Cart</div>
+            </div>
+        </div>
+
+
+      </div>
+
+
+
+          <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+      Product Details section -->
+
+
+      <div class="threeOptions container">
+        <button type="button" class="Details" autofocus>Product Details</button>
+        <button type="button" class="RT">Rating & Reviews</button>
+        <button type="button" class="FAQ">FAQs</button>
+      </div>
+
+      <div class="PDSpec container" >
+        <!-- <h1 class="pdspec">Product specifications</h1>
+        <div class="pdsec1">
+            <div class="Def1">Material composition</div>
+            <div class="DET1">
+                <div class="Material"></div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="pdsec1">
+            <div class="Def1">Care instructions</div>
+            <div class="DET1">
+                <div class="Care"></div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="pdsec1">
+            <div class="Def1">Fit type</div>
+            <div class="DET1">
+                <div class="Fit"></div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="pdsec1">
+            <div class="Def1">Pattern</div>
+            <div class="DET1">
+                <div class="Pattern"></div>
+                <hr>
+            </div>
+        </div> -->
+
+
+        <!-- product Reviews (❁´◡`❁)(❁´◡`❁)(❁´◡`❁)-->
+         <!-- <div class="ProductRevSection">
+          <div class="Revdv1">
+            <div><span>All Reviews</span>  <span>(451)</span></div>
+            <div class="RVS">
+              <div class="RevSort"> 
+                <span>Latest</span>  <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="RaR">Write a Review</div>
+              <div class="RevSortList hid">
+                <div> <span>Latest</span>   <i class="fa-solid fa-check"></i> </div>
+                <div><span>Most Relevant</span> <i class="fa-solid fa-check"></i> </div>
+                <div><span>Oldest</span> <i class="fa-solid fa-check"></i> </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- REviews⛩️⛩️⛩️⛩️⛩️ -->
+
+          <!-- <div class="RevCardContainer">
+
+            <div class="RevCard">
+              <div class="rc1">
+                <span class="star">★★★★★</span>
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="rc2">
+                <h2>Ethan R.</h2>
+                <div><img src="/images/ver2.jpg" alt=""></div>
+                
+              </div>
+              <div class="rc3">" <span>This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.</span> "</div>
+              <div class="rc4">Posted on <span> August 16, 2023</span></div>
+            </div>
+
+            <div class="RevCard">
+              <div class="rc1">
+              <span class="star2">★★★★★</span>
+              <i class="fa-solid fa-ellipsis"></i>
+              </div>
+              <div class="rc2">
+                <h2>Ethan R.</h2>
+                <div><img src="/images/ver2.jpg" alt=""></div>
+                
+              </div>
+              <div class="rc3">" <span>This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.</span> "</div>
+              <div class="rc4">Posted on <span> August 16, 2023</span></div>
+            </div>
+
+          </div> -->
+
+        <!-- </div> -->
+          <!-- FAQ⛩️⛩️⛩️⛩️⛩️ -->
+
+          <!-- <div class="FAQXontainer">
+            <div class="Fhead">
+              <h1>Frequently asked questions</h1>
+            </div>
+
+            <div class="QuestionCards">
+
+              <div class="questioCard">
+                <div> <h4>What is the material of the t-shirt?</h4>  <i class="fa-solid fa-angle-down"></i>   <i class="fa-solid fa-angle-up hid"></i></div>
+                <div class="answer hid">Provide details about the fabric type (e.g., cotton, polyester, blend), weight, and any specific features.</div>
+                <hr>
+              </div>
+
+              <div class="questioCard">
+                <div><h4>What is the material of the t-shirt?</h4>  <i class="fa-solid fa-angle-down"></i>   <i class="fa-solid fa-angle-up hid"></i></div>
+                <div class="answer hid">Provide details about the fabric type (e.g., cotton, polyester, blend), weight, and any specific features.</div>
+                <hr>
+              </div>
+
+
+            </div>
+          </div> -->
+
+
+
+
+
+        
+      </div>
+
+       <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+  New Arrivals section -->
+
+    <div class="narrival container">
+      <h1>YOU MIGHT ALSO LIKE</h1>
+      <div class="naPhotos">
+        <div class="card">
+          <div class="ProImage naimg1">
+            <img src="/images/New-Arrival-Home/1.webp" alt="" />
+          </div>
+          <div class="proname"></div>
+          <div class="">
+            <span class="star">★★★★★</span>
+            <span class="evaluation"></span><span class="slashDisck">/5</span>
+          </div>
+          <div class="ProductPrice">
+            <span>$</span><span class="PriceNo"></span>
+            <span class="PriceAfter"></span>
+            <span class="ProductDiscount"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ProImage naimg2">
+            <img src="/images/New-Arrival-Home/1.webp" alt="" />
+          </div>
+          <div class="proname"></div>
+          <div class="">
+            <span class="star">★★★★★</span>
+            <span class="evaluation"></span><span class="slashDisck">/5</span>
+          </div>
+          <div class="ProductPrice">
+            <span>$</span><span class="PriceNo"></span>
+
+            <span class="PriceAfter"></span>
+            <span class="ProductDiscount"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ProImage naimg3">
+            <img src="/images/New-Arrival-Home/1.webp" alt="" />
+          </div>
+          <div class="proname"></div>
+          <div class="">
+            <span class="star" style="--rating: 4">★★★★★</span>
+            <span class="evaluation"></span><span class="slashDisck">/5</span>
+          </div>
+          <div class="ProductPrice">
+            <span>$</span><span class="PriceNo"></span>
+
+            <span class="PriceAfter"></span>
+            <span class="ProductDiscount"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ProImage naimg4">
+            <img src="/images/New-Arrival-Home/1.webp" alt="" />
+          </div>
+          <div class="proname"></div>
+          <div class="">
+            <span class="star">★★★★★</span>
+            <span class="evaluation"></span><span class="slashDisck">/5</span>
+          </div>
+          <div class="ProductPrice">
+            <span>$</span><span class="PriceNo"></span>
+
+            <span class="PriceAfter"></span>
+            <span class="ProductDiscount"></span>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="viewbtn">
+        <a href="">View All</a>
+      </div> -->
+      <!-- <hr class="newHR5" /> -->
+    </div>
+
+
+      
+      <!-- <hr> -->
+
+
+     <!-- /* ⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️⛩️ */
+ Footer section -->
+
+    <div class="footer">
+      <div class="footerSection container">
+        <div class="banner">
+          <div class="Stay">
+            STAY UP TO DATE ABOUT OUR LATEST OFFERS
+          </div>
+          <div class="Mail5">
+            <div class="">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" name="" id="d1" placeholder="Enter yout email address">
+            </div>
+            <a href="">Subscribe to Newsletter</a>
+          </div>
+        </div>
+        <div class="Fo">
+          <div class="hone">SHOP.CO</div>
+          <!-- <h1>SHOP.CO</h1> -->
+          <div class="fooCont">
+            We have clothes that suits your style and which you’re proud to
+            wear. From women to men.
+          </div>
+          <div class="socialICons">
+            <div>
+              <a href="https://x.com/"> <i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div><a href="https://facebook.com/"> <i class="fa-brands fa-facebook"></i></div></a>
+            <div><a href="https://instagram.com/"> <i class="fa-brands fa-square-instagram"></i></div></a>
+            <div><a href="https://github.com/"> <i class="fa-brands fa-github"></i></div></a>
+          </div>
+        </div>
+        <div class="s1">
+          <div class="footHead">Company</div>
+          <br />
+          <div class="FooterText">
+            <div><a href="">About</a></div>
+            <div><a href="">Features</a></div>
+            <div><a href="">Works</a></div>
+            <div><a href="">Career</a></div>
+          </div>
+        </div>
+
+        <div class="s1">
+          <div class="footHead">Help</div>
+          <br />
+          <div class="FooterText">
+            <div><a href="">Customer Support</a></div>
+            <div><a href="">Delivery Details</a></div>
+            <div><a href="">Terms & Conditions</a></div>
+            <div><a href="">Privacy Policy</a></div>
+          </div>
+        </div>
+
+        <div class="s1">
+          <div class="footHead">FAQ</div>
+          <br />
+          <div class="FooterText">
+            <div><a href="">Account</a></div>
+            <div><a href="">Manage Deliveries</a></div>
+            <div><a href="">Orders</a></div>
+            <div><a href="">Payments</a></div>
+          </div>
+        </div>
+
+        <div class="s1">
+          <div class="footHead">Resourses</div>
+          <br />
+          <div class="FooterText">
+            <div><a href="">Free eBooks</a></div>
+            <div><a href="">Development Tutorial</a></div>
+            <div><a href="">How to - Blog</a></div>
+            <div><a href="">Youtube Playlist</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- <hr /> -->
+      <div class="container hr2">
+        <hr />
+      </div>
+      <div class="bot101 container">
+        <div class="Kfoot1">
+          Shop.co © Made by <span>Khaled Ibrahiem</span>, Designed by
+          <span>Hamza Naeem</span>
+        </div>
+        <div class="CCard22">
+          <span class="credCard"
+            ><img src="/images/cards/Visa.svg" alt="" srcset=""
+          /></span>
+          <span class="credCard"
+            ><img src="/images/cards/mastercard.svg" alt="" srcset=""
+          /></span>
+          <span class="credCard"
+            ><img src="/images/cards/paypal.svg" alt="" srcset=""
+          /></span>
+          <span class="credCard"
+            ><img src="/images/cards/applePay.svg" alt="" srcset=""
+          /></span>
+          <span class="credCard"
+            ><img src="/images/cards/googlePay.svg" alt="" srcset=""
+          /></span>
+        </div>
+      </div>
+
+
+
+
+
+
+    <!-- script -->
+    <script src="product.js"></script>
+  </body>
+</html>

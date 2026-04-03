@@ -653,8 +653,8 @@
     {
       "id": 4,
       "name": "Skinny Fit Jeans",
-      "price": 240,
-      "original_price": 288,
+      "price": 208,
+      "original_price": 260,
       "discount": 20,
       "rating": 3.5,
       "category": "Jeans",
@@ -830,8 +830,8 @@
     {
       "id": 6,
       "name": "Sleeve Striped T-shirt",
-      "price": 130,
-      "original_price": 169,
+      "price": 112,
+      "original_price": 160,
       "discount": 30,
       "rating": 4.5,
       "category": "T-shirts",
@@ -1066,9 +1066,9 @@
     {
       "id": 8,
       "name": "Loose Fit Bermuda Shorts",
-      "price": 240,
-      "original_price": 288,
-      "discount": 20,
+      "price": 80,
+      "original_price": null,
+      "discount": null,
       "rating": 4.5,
       "category": "Shorts",
       "product_details": {
@@ -1422,8 +1422,8 @@
     {
       "id": 11,
       "name": "Vertical Striped Shirt",
-      "price": 186,
-      "original_price": 232,
+      "price": 212,
+      "original_price": 254.4,
       "discount": 20,
       "rating": 5,
       "category": "Shirts",

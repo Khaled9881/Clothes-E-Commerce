@@ -4,6 +4,10 @@ body {
   font-family: "Lato", sans-serif;
 } */
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #020817;
   --font-primary: "Integral CF", sans-serif;
@@ -1161,5 +1165,30 @@ New Arrivals section */
 
 .fa-circle-user,
 .stick div:first-child {
+  cursor: pointer;
+}
+
+.narrival h1,
+.narrival .naPhotos {
+  opacity: 0;
+}
+
+@keyframes sect {
+  from {
+    opacity: 1;
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show {
+  animation: sect 2s ease forwards;
+}
+
+.card {
   cursor: pointer;
 }

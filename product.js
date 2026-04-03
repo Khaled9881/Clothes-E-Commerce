@@ -579,3 +579,38 @@ document
   .addEventListener("click", (e) => {
     window.location.href = "/index.html";
   });
+
+//animation
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
+
+const naHead = document.querySelector(".narrival h1");
+const naImgs = document.querySelector(".narrival .naPhotos");
+
+observer.observe(naHead);
+observer.observe(naImgs);
+
+//Go
+document.querySelector(".naPhotos").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.closest(".card")) {
+    let pd = parseInt(e.target.closest(".card").dataset.productid);
+    console.log(e.target.closest(".card"));
+    console.log(e.target.closest(".card").dataset.productid);
+    console.log(pd);
+    localStorage.setItem("productId", pd);
+  }
+
+  window.location.href = "/product.html";
+});
